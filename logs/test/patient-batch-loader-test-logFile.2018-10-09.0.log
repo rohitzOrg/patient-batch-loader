@@ -1,0 +1,269 @@
+2018-10-09 16:59:24,222 ERROR [restartedMain] SpringApplication: Application run failed
+java.lang.NoSuchMethodError: org.yaml.snakeyaml.LoaderOptions.setAllowDuplicateKeys(Z)V
+	at org.springframework.boot.env.OriginTrackedYamlLoader.createYaml(OriginTrackedYamlLoader.java:69)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:137)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:75)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:570)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:503)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:470)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:451)
+	at java.lang.Iterable.forEach(Unknown Source)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:450)
+	at java.lang.Iterable.forEach(Unknown Source)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:447)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:336)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:215)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:198)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:185)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:171)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:74)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:364)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at com.pluralsight.springbatch.patientbatchloader.PatientBatchLoaderApp.main(PatientBatchLoaderApp.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2018-10-09 17:02:19,046 INFO  [restartedMain] PatientBatchLoaderApp: Starting PatientBatchLoaderApp on W1571805 with PID 18676 (started by RA048624 in C:\tools_prac\deployable projects spring\patient-batch-loader)
+2018-10-09 17:02:19,046 DEBUG [restartedMain] PatientBatchLoaderApp: Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2018-10-09 17:02:19,046 INFO  [restartedMain] PatientBatchLoaderApp: The following profiles are active: dev
+2018-10-09 17:02:23,696 DEBUG [restartedMain] DatabaseConfiguration: Configuring Liquibase
+2018-10-09 17:02:27,389 WARN  [restartedMain] jsr: UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-09 17:02:27,402 WARN  [restartedMain] jsr: UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-09 17:02:27,419 DEBUG [restartedMain] session: Setting default session timeout to 1800
+2018-10-09 17:02:27,435 INFO  [restartedMain] servlet: Initializing Spring embedded WebApplicationContext
+2018-10-09 17:02:28,175 INFO  [restartedMain] WebConfiguration: Web application configuration, using profiles: dev
+2018-10-09 17:02:28,175 INFO  [restartedMain] WebConfiguration: Web application fully configured
+2018-10-09 17:02:28,191 DEBUG [restartedMain] session: Registered session listener io.undertow.servlet.core.SessionListenerBridge@2a481533
+2018-10-09 17:02:28,238 DEBUG [restartedMain] session: Setting default session timeout to 1800
+2018-10-09 17:02:31,180 DEBUG [restartedMain] undertow: starting undertow server io.undertow.Undertow@1c48e9
+2018-10-09 17:02:31,186 DEBUG [restartedMain] undertow: Configuring listener with protocol HTTP for interface 0.0.0.0 and port 8080
+2018-10-09 17:02:31,257 INFO  [restartedMain] PatientBatchLoaderApp: Started PatientBatchLoaderApp in 13.956 seconds (JVM running for 15.361)
+2018-10-09 17:02:31,264 INFO  [restartedMain] PatientBatchLoaderApp: 
+----------------------------------------------------------
+	Spring Batch Application 'PatientBatchLoader' is running!Profile(s): 	[dev]
+----------------------------------------------------------
+2018-10-09 17:03:29,353 DEBUG [XNIO-2 task-1] security: Attempting to authenticate /h2/, authentication required: false
+2018-10-09 17:03:29,356 DEBUG [XNIO-2 task-1] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /h2/
+2018-10-09 17:03:29,358 DEBUG [XNIO-2 task-1] security: Authentication result was ATTEMPTED for /h2/
+2018-10-09 17:03:29,362 INFO  [XNIO-2 task-1] servlet: Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-09 17:03:30,689 DEBUG [XNIO-2 task-2] security: Attempting to authenticate /favicon.ico, authentication required: false
+2018-10-09 17:03:30,690 DEBUG [XNIO-2 task-2] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /favicon.ico
+2018-10-09 17:03:30,690 DEBUG [XNIO-2 task-2] security: Authentication result was ATTEMPTED for /favicon.ico
+2018-10-09 17:03:34,364 DEBUG [XNIO-2 task-3] security: Attempting to authenticate /h2, authentication required: false
+2018-10-09 17:03:34,365 DEBUG [XNIO-2 task-3] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /h2
+2018-10-09 17:03:34,365 DEBUG [XNIO-2 task-3] security: Authentication result was ATTEMPTED for /h2
+2018-10-09 17:03:40,151 DEBUG [XNIO-2 task-4] security: Attempting to authenticate /, authentication required: false
+2018-10-09 17:03:40,153 DEBUG [XNIO-2 task-4] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /
+2018-10-09 17:03:40,155 DEBUG [XNIO-2 task-4] security: Authentication result was ATTEMPTED for /
+2018-10-09 17:06:08,161 DEBUG [XNIO-2 task-5] security: Attempting to authenticate /console, authentication required: false
+2018-10-09 17:06:08,162 DEBUG [XNIO-2 task-5] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console
+2018-10-09 17:06:08,163 DEBUG [XNIO-2 task-5] security: Authentication result was ATTEMPTED for /console
+2018-10-09 17:06:08,203 DEBUG [XNIO-2 task-6] security: Attempting to authenticate /console/, authentication required: false
+2018-10-09 17:06:08,205 DEBUG [XNIO-2 task-6] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/
+2018-10-09 17:06:08,207 DEBUG [XNIO-2 task-6] security: Authentication result was ATTEMPTED for /console/
+2018-10-09 17:06:08,256 DEBUG [XNIO-2 task-7] security: Attempting to authenticate /console/stylesheet.css, authentication required: false
+2018-10-09 17:06:08,267 DEBUG [XNIO-2 task-7] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/stylesheet.css
+2018-10-09 17:06:08,285 DEBUG [XNIO-2 task-7] security: Authentication result was ATTEMPTED for /console/stylesheet.css
+2018-10-09 17:06:08,605 DEBUG [XNIO-2 task-8] security: Attempting to authenticate /console/login.jsp, authentication required: false
+2018-10-09 17:06:08,607 DEBUG [XNIO-2 task-8] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/login.jsp
+2018-10-09 17:06:08,609 DEBUG [XNIO-2 task-8] security: Authentication result was ATTEMPTED for /console/login.jsp
+2018-10-09 17:06:08,899 DEBUG [XNIO-2 task-9] security: Attempting to authenticate /console/background.gif, authentication required: false
+2018-10-09 17:06:08,900 DEBUG [XNIO-2 task-9] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/background.gif
+2018-10-09 17:06:08,901 DEBUG [XNIO-2 task-9] security: Authentication result was ATTEMPTED for /console/background.gif
+2018-10-09 17:09:02,649 DEBUG [XNIO-2 task-10] security: Attempting to authenticate /console/test.do, authentication required: false
+2018-10-09 17:09:02,653 DEBUG [XNIO-2 task-10] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/test.do
+2018-10-09 17:09:02,655 DEBUG [XNIO-2 task-10] security: Authentication result was ATTEMPTED for /console/test.do
+2018-10-09 17:09:02,714 DEBUG [XNIO-2 task-11] security: Attempting to authenticate /console/stylesheet.css, authentication required: false
+2018-10-09 17:09:02,719 DEBUG [XNIO-2 task-11] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/stylesheet.css
+2018-10-09 17:09:02,720 DEBUG [XNIO-2 task-11] security: Authentication result was ATTEMPTED for /console/stylesheet.css
+2018-10-09 17:09:03,090 DEBUG [XNIO-2 task-12] security: Attempting to authenticate /console/background.gif, authentication required: false
+2018-10-09 17:09:03,091 DEBUG [XNIO-2 task-12] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/background.gif
+2018-10-09 17:09:03,091 DEBUG [XNIO-2 task-12] security: Authentication result was ATTEMPTED for /console/background.gif
+2018-10-09 17:09:04,620 DEBUG [XNIO-2 task-13] security: Attempting to authenticate /console/login.do, authentication required: false
+2018-10-09 17:09:04,622 DEBUG [XNIO-2 task-13] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/login.do
+2018-10-09 17:09:04,622 DEBUG [XNIO-2 task-13] security: Authentication result was ATTEMPTED for /console/login.do
+2018-10-09 17:09:04,823 DEBUG [XNIO-2 task-14] security: Attempting to authenticate /console/header.jsp, authentication required: false
+2018-10-09 17:09:04,827 DEBUG [XNIO-2 task-14] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/header.jsp
+2018-10-09 17:09:04,830 DEBUG [XNIO-2 task-15] security: Attempting to authenticate /console/tables.do, authentication required: false
+2018-10-09 17:09:04,831 DEBUG [XNIO-2 task-14] security: Authentication result was ATTEMPTED for /console/header.jsp
+2018-10-09 17:09:04,831 DEBUG [XNIO-2 task-15] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tables.do
+2018-10-09 17:09:04,832 DEBUG [XNIO-2 task-15] security: Authentication result was ATTEMPTED for /console/tables.do
+2018-10-09 17:09:04,837 DEBUG [XNIO-2 task-16] security: Attempting to authenticate /console/query.jsp, authentication required: false
+2018-10-09 17:09:04,838 DEBUG [XNIO-2 task-16] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/query.jsp
+2018-10-09 17:09:04,839 DEBUG [XNIO-2 task-16] security: Authentication result was ATTEMPTED for /console/query.jsp
+2018-10-09 17:09:04,839 DEBUG [XNIO-2 task-17] security: Attempting to authenticate /console/help.jsp, authentication required: false
+2018-10-09 17:09:04,840 DEBUG [XNIO-2 task-17] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/help.jsp
+2018-10-09 17:09:04,840 DEBUG [XNIO-2 task-17] security: Authentication result was ATTEMPTED for /console/help.jsp
+2018-10-09 17:09:04,996 DEBUG [XNIO-2 task-18] security: Attempting to authenticate /console/icon_disconnect.gif, authentication required: false
+2018-10-09 17:09:04,997 DEBUG [XNIO-2 task-18] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_disconnect.gif
+2018-10-09 17:09:04,997 DEBUG [XNIO-2 task-18] security: Authentication result was ATTEMPTED for /console/icon_disconnect.gif
+2018-10-09 17:09:05,039 DEBUG [XNIO-2 task-19] security: Attempting to authenticate /console/icon_line.gif, authentication required: false
+2018-10-09 17:09:05,040 DEBUG [XNIO-2 task-19] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_line.gif
+2018-10-09 17:09:05,041 DEBUG [XNIO-2 task-19] security: Authentication result was ATTEMPTED for /console/icon_line.gif
+2018-10-09 17:09:05,046 DEBUG [XNIO-2 task-22] security: Attempting to authenticate /console/icon_commit.gif, authentication required: false
+2018-10-09 17:09:05,046 DEBUG [XNIO-2 task-22] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_commit.gif
+2018-10-09 17:09:05,046 DEBUG [XNIO-2 task-22] security: Authentication result was ATTEMPTED for /console/icon_commit.gif
+2018-10-09 17:09:05,046 DEBUG [XNIO-2 task-20] security: Attempting to authenticate /console/icon_refresh.gif, authentication required: false
+2018-10-09 17:09:05,056 DEBUG [XNIO-2 task-20] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_refresh.gif
+2018-10-09 17:09:05,056 DEBUG [XNIO-2 task-20] security: Authentication result was ATTEMPTED for /console/icon_refresh.gif
+2018-10-09 17:09:05,046 DEBUG [XNIO-2 task-21] security: Attempting to authenticate /console/icon_rollback.gif, authentication required: false
+2018-10-09 17:09:05,058 DEBUG [XNIO-2 task-21] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_rollback.gif
+2018-10-09 17:09:05,059 DEBUG [XNIO-2 task-21] security: Authentication result was ATTEMPTED for /console/icon_rollback.gif
+2018-10-09 17:09:05,065 DEBUG [XNIO-2 task-23] security: Attempting to authenticate /console/icon_run.gif, authentication required: false
+2018-10-09 17:09:05,065 DEBUG [XNIO-2 task-23] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_run.gif
+2018-10-09 17:09:05,066 DEBUG [XNIO-2 task-23] security: Authentication result was ATTEMPTED for /console/icon_run.gif
+2018-10-09 17:09:05,082 DEBUG [XNIO-2 task-24] security: Attempting to authenticate /console/icon_run_selected.gif, authentication required: false
+2018-10-09 17:09:05,083 DEBUG [XNIO-2 task-24] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_run_selected.gif
+2018-10-09 17:09:05,083 DEBUG [XNIO-2 task-24] security: Authentication result was ATTEMPTED for /console/icon_run_selected.gif
+2018-10-09 17:09:05,093 DEBUG [XNIO-2 task-25] security: Attempting to authenticate /console/icon_stop.gif, authentication required: false
+2018-10-09 17:09:05,093 DEBUG [XNIO-2 task-25] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_stop.gif
+2018-10-09 17:09:05,094 DEBUG [XNIO-2 task-25] security: Authentication result was ATTEMPTED for /console/icon_stop.gif
+2018-10-09 17:09:05,094 DEBUG [XNIO-2 task-26] security: Attempting to authenticate /console/icon_history.gif, authentication required: false
+2018-10-09 17:09:05,095 DEBUG [XNIO-2 task-26] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_history.gif
+2018-10-09 17:09:05,097 DEBUG [XNIO-2 task-27] security: Attempting to authenticate /console/icon_help.gif, authentication required: false
+2018-10-09 17:09:05,098 DEBUG [XNIO-2 task-27] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/icon_help.gif
+2018-10-09 17:09:05,099 DEBUG [XNIO-2 task-27] security: Authentication result was ATTEMPTED for /console/icon_help.gif
+2018-10-09 17:09:05,097 DEBUG [XNIO-2 task-26] security: Authentication result was ATTEMPTED for /console/icon_history.gif
+2018-10-09 17:09:05,586 DEBUG [XNIO-2 task-28] security: Attempting to authenticate /console/tree.js, authentication required: false
+2018-10-09 17:09:05,587 DEBUG [XNIO-2 task-28] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree.js
+2018-10-09 17:09:05,587 DEBUG [XNIO-2 task-28] security: Authentication result was ATTEMPTED for /console/tree.js
+2018-10-09 17:09:05,637 DEBUG [XNIO-2 task-1] security: Attempting to authenticate /console/tree_empty.gif, authentication required: false
+2018-10-09 17:09:05,638 DEBUG [XNIO-2 task-1] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_empty.gif
+2018-10-09 17:09:05,638 DEBUG [XNIO-2 task-1] security: Authentication result was ATTEMPTED for /console/tree_empty.gif
+2018-10-09 17:09:05,631 DEBUG [XNIO-2 task-29] security: Attempting to authenticate /console/tree_minus.gif, authentication required: false
+2018-10-09 17:09:05,645 DEBUG [XNIO-2 task-29] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_minus.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-30] security: Attempting to authenticate /console/tree_plus.gif, authentication required: false
+2018-10-09 17:09:05,649 DEBUG [XNIO-2 task-32] security: Attempting to authenticate /console/tree_table.gif, authentication required: false
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-30] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_plus.gif
+2018-10-09 17:09:05,649 DEBUG [XNIO-2 task-2] security: Attempting to authenticate /console/tree_column.gif, authentication required: false
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-32] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_table.gif
+2018-10-09 17:09:05,649 DEBUG [XNIO-2 task-31] security: Attempting to authenticate /console/tree_database.gif, authentication required: false
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-29] security: Authentication result was ATTEMPTED for /console/tree_minus.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-30] security: Authentication result was ATTEMPTED for /console/tree_plus.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-31] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_database.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-31] security: Authentication result was ATTEMPTED for /console/tree_database.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-32] security: Authentication result was ATTEMPTED for /console/tree_table.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-2] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_column.gif
+2018-10-09 17:09:05,653 DEBUG [XNIO-2 task-2] security: Authentication result was ATTEMPTED for /console/tree_column.gif
+2018-10-09 17:09:05,650 DEBUG [XNIO-2 task-3] security: Attempting to authenticate /console/tree_type.gif, authentication required: false
+2018-10-09 17:09:05,661 DEBUG [XNIO-2 task-3] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_type.gif
+2018-10-09 17:09:05,670 DEBUG [XNIO-2 task-5] security: Attempting to authenticate /console/tree_index.gif, authentication required: false
+2018-10-09 17:09:05,672 DEBUG [XNIO-2 task-3] security: Authentication result was ATTEMPTED for /console/tree_type.gif
+2018-10-09 17:09:05,670 DEBUG [XNIO-2 task-4] security: Attempting to authenticate /console/tree_index_az.gif, authentication required: false
+2018-10-09 17:09:05,672 DEBUG [XNIO-2 task-4] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_index_az.gif
+2018-10-09 17:09:05,672 DEBUG [XNIO-2 task-4] security: Authentication result was ATTEMPTED for /console/tree_index_az.gif
+2018-10-09 17:09:05,672 DEBUG [XNIO-2 task-5] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_index.gif
+2018-10-09 17:09:05,673 DEBUG [XNIO-2 task-5] security: Authentication result was ATTEMPTED for /console/tree_index.gif
+2018-10-09 17:09:05,696 DEBUG [XNIO-2 task-6] security: Attempting to authenticate /console/tree_folder.gif, authentication required: false
+2018-10-09 17:09:05,698 DEBUG [XNIO-2 task-6] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_folder.gif
+2018-10-09 17:09:05,698 DEBUG [XNIO-2 task-6] security: Authentication result was ATTEMPTED for /console/tree_folder.gif
+2018-10-09 17:09:05,700 DEBUG [XNIO-2 task-7] security: Attempting to authenticate /console/tree_sequences.gif, authentication required: false
+2018-10-09 17:09:05,701 DEBUG [XNIO-2 task-7] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_sequences.gif
+2018-10-09 17:09:05,701 DEBUG [XNIO-2 task-7] security: Authentication result was ATTEMPTED for /console/tree_sequences.gif
+2018-10-09 17:09:05,704 DEBUG [XNIO-2 task-8] security: Attempting to authenticate /console/tree_sequence.gif, authentication required: false
+2018-10-09 17:09:05,705 DEBUG [XNIO-2 task-8] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_sequence.gif
+2018-10-09 17:09:05,705 DEBUG [XNIO-2 task-8] security: Authentication result was ATTEMPTED for /console/tree_sequence.gif
+2018-10-09 17:09:05,717 DEBUG [XNIO-2 task-9] security: Attempting to authenticate /console/tree_users.gif, authentication required: false
+2018-10-09 17:09:05,718 DEBUG [XNIO-2 task-9] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_users.gif
+2018-10-09 17:09:05,718 DEBUG [XNIO-2 task-9] security: Authentication result was ATTEMPTED for /console/tree_users.gif
+2018-10-09 17:09:05,718 DEBUG [XNIO-2 task-11] security: Attempting to authenticate /console/tree_info.gif, authentication required: false
+2018-10-09 17:09:05,718 DEBUG [XNIO-2 task-10] security: Attempting to authenticate /console/tree_user.gif, authentication required: false
+2018-10-09 17:09:05,718 DEBUG [XNIO-2 task-11] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_info.gif
+2018-10-09 17:09:05,718 DEBUG [XNIO-2 task-10] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_user.gif
+2018-10-09 17:09:05,719 DEBUG [XNIO-2 task-10] security: Authentication result was ATTEMPTED for /console/tree_user.gif
+2018-10-09 17:09:05,719 DEBUG [XNIO-2 task-11] security: Authentication result was ATTEMPTED for /console/tree_info.gif
+2018-10-09 17:09:12,220 DEBUG [XNIO-2 task-12] security: Attempting to authenticate /console/query.do, authentication required: false
+2018-10-09 17:09:12,221 DEBUG [XNIO-2 task-12] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/query.do
+2018-10-09 17:09:12,221 DEBUG [XNIO-2 task-12] security: Authentication result was ATTEMPTED for /console/query.do
+2018-10-09 17:09:12,252 DEBUG [XNIO-2 task-13] security: Attempting to authenticate /console/stylesheet.css, authentication required: false
+2018-10-09 17:09:12,253 DEBUG [XNIO-2 task-13] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/stylesheet.css
+2018-10-09 17:09:12,253 DEBUG [XNIO-2 task-13] security: Authentication result was ATTEMPTED for /console/stylesheet.css
+2018-10-09 17:09:12,254 DEBUG [XNIO-2 task-14] security: Attempting to authenticate /console/table.js, authentication required: false
+2018-10-09 17:09:12,255 DEBUG [XNIO-2 task-14] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/table.js
+2018-10-09 17:09:12,255 DEBUG [XNIO-2 task-14] security: Authentication result was ATTEMPTED for /console/table.js
+2018-10-09 17:09:58,643 DEBUG [XNIO-2 task-17] security: Attempting to authenticate /console/query.do, authentication required: false
+2018-10-09 17:09:58,645 DEBUG [XNIO-2 task-17] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/query.do
+2018-10-09 17:09:58,646 DEBUG [XNIO-2 task-17] security: Authentication result was ATTEMPTED for /console/query.do
+2018-10-09 17:09:58,673 DEBUG [XNIO-2 task-16] security: Attempting to authenticate /console/stylesheet.css, authentication required: false
+2018-10-09 17:09:58,673 DEBUG [XNIO-2 task-16] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/stylesheet.css
+2018-10-09 17:09:58,674 DEBUG [XNIO-2 task-16] security: Authentication result was ATTEMPTED for /console/stylesheet.css
+2018-10-09 17:09:58,678 DEBUG [XNIO-2 task-16] security: Attempting to authenticate /console/table.js, authentication required: false
+2018-10-09 17:09:58,678 DEBUG [XNIO-2 task-16] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/table.js
+2018-10-09 17:09:58,679 DEBUG [XNIO-2 task-16] security: Authentication result was ATTEMPTED for /console/table.js
+2018-10-09 17:14:17,453 DEBUG [XNIO-2 task-22] security: Attempting to authenticate /console/tables.do, authentication required: false
+2018-10-09 17:14:17,454 DEBUG [XNIO-2 task-22] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tables.do
+2018-10-09 17:14:17,455 DEBUG [XNIO-2 task-22] security: Authentication result was ATTEMPTED for /console/tables.do
+2018-10-09 17:14:17,680 DEBUG [XNIO-2 task-23] security: Attempting to authenticate /console/stylesheet.css, authentication required: false
+2018-10-09 17:14:17,681 DEBUG [XNIO-2 task-23] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/stylesheet.css
+2018-10-09 17:14:17,681 DEBUG [XNIO-2 task-23] security: Authentication result was ATTEMPTED for /console/stylesheet.css
+2018-10-09 17:14:17,682 DEBUG [XNIO-2 task-21] security: Attempting to authenticate /console/tree.js, authentication required: false
+2018-10-09 17:14:17,683 DEBUG [XNIO-2 task-21] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree.js
+2018-10-09 17:14:17,684 DEBUG [XNIO-2 task-21] security: Authentication result was ATTEMPTED for /console/tree.js
+2018-10-09 17:14:17,711 DEBUG [XNIO-2 task-20] security: Attempting to authenticate /console/tree_minus.gif, authentication required: false
+2018-10-09 17:14:17,712 DEBUG [XNIO-2 task-20] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_minus.gif
+2018-10-09 17:14:17,712 DEBUG [XNIO-2 task-20] security: Authentication result was ATTEMPTED for /console/tree_minus.gif
+2018-10-09 17:14:17,713 DEBUG [XNIO-2 task-18] security: Attempting to authenticate /console/tree_plus.gif, authentication required: false
+2018-10-09 17:14:17,713 DEBUG [XNIO-2 task-18] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_plus.gif
+2018-10-09 17:14:17,713 DEBUG [XNIO-2 task-18] security: Authentication result was ATTEMPTED for /console/tree_plus.gif
+2018-10-09 17:14:17,715 DEBUG [XNIO-2 task-24] security: Attempting to authenticate /console/tree_database.gif, authentication required: false
+2018-10-09 17:14:17,715 DEBUG [XNIO-2 task-24] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_database.gif
+2018-10-09 17:14:17,716 DEBUG [XNIO-2 task-24] security: Authentication result was ATTEMPTED for /console/tree_database.gif
+2018-10-09 17:14:17,721 DEBUG [XNIO-2 task-25] security: Attempting to authenticate /console/tree_table.gif, authentication required: false
+2018-10-09 17:14:17,721 DEBUG [XNIO-2 task-25] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_table.gif
+2018-10-09 17:14:17,721 DEBUG [XNIO-2 task-25] security: Authentication result was ATTEMPTED for /console/tree_table.gif
+2018-10-09 17:14:17,723 DEBUG [XNIO-2 task-27] security: Attempting to authenticate /console/tree_empty.gif, authentication required: false
+2018-10-09 17:14:17,723 DEBUG [XNIO-2 task-27] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_empty.gif
+2018-10-09 17:14:17,723 DEBUG [XNIO-2 task-27] security: Authentication result was ATTEMPTED for /console/tree_empty.gif
+2018-10-09 17:14:17,724 DEBUG [XNIO-2 task-25] security: Attempting to authenticate /console/tree_column.gif, authentication required: false
+2018-10-09 17:14:17,724 DEBUG [XNIO-2 task-25] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_column.gif
+2018-10-09 17:14:17,724 DEBUG [XNIO-2 task-25] security: Authentication result was ATTEMPTED for /console/tree_column.gif
+2018-10-09 17:14:17,730 DEBUG [XNIO-2 task-15] security: Attempting to authenticate /console/tree_type.gif, authentication required: false
+2018-10-09 17:14:17,732 DEBUG [XNIO-2 task-15] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_type.gif
+2018-10-09 17:14:17,732 DEBUG [XNIO-2 task-15] security: Authentication result was ATTEMPTED for /console/tree_type.gif
+2018-10-09 17:14:17,740 DEBUG [XNIO-2 task-28] security: Attempting to authenticate /console/tree_index_az.gif, authentication required: false
+2018-10-09 17:14:17,741 DEBUG [XNIO-2 task-28] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_index_az.gif
+2018-10-09 17:14:17,741 DEBUG [XNIO-2 task-1] security: Attempting to authenticate /console/tree_index.gif, authentication required: false
+2018-10-09 17:14:17,741 DEBUG [XNIO-2 task-28] security: Authentication result was ATTEMPTED for /console/tree_index_az.gif
+2018-10-09 17:14:17,741 DEBUG [XNIO-2 task-1] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_index.gif
+2018-10-09 17:14:17,741 DEBUG [XNIO-2 task-1] security: Authentication result was ATTEMPTED for /console/tree_index.gif
+2018-10-09 17:14:17,768 DEBUG [XNIO-2 task-32] security: Attempting to authenticate /console/tree_folder.gif, authentication required: false
+2018-10-09 17:14:17,768 DEBUG [XNIO-2 task-32] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_folder.gif
+2018-10-09 17:14:17,768 DEBUG [XNIO-2 task-32] security: Authentication result was ATTEMPTED for /console/tree_folder.gif
+2018-10-09 17:14:17,775 DEBUG [XNIO-2 task-29] security: Attempting to authenticate /console/tree_sequences.gif, authentication required: false
+2018-10-09 17:14:17,775 DEBUG [XNIO-2 task-29] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_sequences.gif
+2018-10-09 17:14:17,776 DEBUG [XNIO-2 task-29] security: Authentication result was ATTEMPTED for /console/tree_sequences.gif
+2018-10-09 17:14:17,776 DEBUG [XNIO-2 task-2] security: Attempting to authenticate /console/tree_sequence.gif, authentication required: false
+2018-10-09 17:14:17,777 DEBUG [XNIO-2 task-2] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_sequence.gif
+2018-10-09 17:14:17,777 DEBUG [XNIO-2 task-2] security: Authentication result was ATTEMPTED for /console/tree_sequence.gif
+2018-10-09 17:14:17,778 DEBUG [XNIO-2 task-31] security: Attempting to authenticate /console/tree_users.gif, authentication required: false
+2018-10-09 17:14:17,778 DEBUG [XNIO-2 task-31] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_users.gif
+2018-10-09 17:14:17,779 DEBUG [XNIO-2 task-31] security: Authentication result was ATTEMPTED for /console/tree_users.gif
+2018-10-09 17:14:17,785 DEBUG [XNIO-2 task-30] security: Attempting to authenticate /console/tree_user.gif, authentication required: false
+2018-10-09 17:14:17,785 DEBUG [XNIO-2 task-30] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_user.gif
+2018-10-09 17:14:17,786 DEBUG [XNIO-2 task-30] security: Authentication result was ATTEMPTED for /console/tree_user.gif
+2018-10-09 17:14:17,787 DEBUG [XNIO-2 task-3] security: Attempting to authenticate /console/tree_info.gif, authentication required: false
+2018-10-09 17:14:17,787 DEBUG [XNIO-2 task-3] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/tree_info.gif
+2018-10-09 17:14:17,787 DEBUG [XNIO-2 task-3] security: Authentication result was ATTEMPTED for /console/tree_info.gif
+2018-10-09 17:14:21,272 DEBUG [XNIO-2 task-4] security: Attempting to authenticate /console/query.do, authentication required: false
+2018-10-09 17:14:21,273 DEBUG [XNIO-2 task-4] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/query.do
+2018-10-09 17:14:21,273 DEBUG [XNIO-2 task-4] security: Authentication result was ATTEMPTED for /console/query.do
+2018-10-09 17:14:21,297 DEBUG [XNIO-2 task-5] security: Attempting to authenticate /console/table.js, authentication required: false
+2018-10-09 17:14:21,297 DEBUG [XNIO-2 task-5] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/table.js
+2018-10-09 17:14:21,298 DEBUG [XNIO-2 task-5] security: Authentication result was ATTEMPTED for /console/table.js
+2018-10-09 17:14:23,084 DEBUG [XNIO-2 task-6] security: Attempting to authenticate /console/query.do, authentication required: false
+2018-10-09 17:14:23,085 DEBUG [XNIO-2 task-6] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/query.do
+2018-10-09 17:14:23,085 DEBUG [XNIO-2 task-6] security: Authentication result was ATTEMPTED for /console/query.do
+2018-10-09 17:14:24,415 DEBUG [XNIO-2 task-7] security: Attempting to authenticate /console/query.do, authentication required: false
+2018-10-09 17:14:24,416 DEBUG [XNIO-2 task-7] security: Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5eb8f8e1 for /console/query.do
+2018-10-09 17:14:24,416 DEBUG [XNIO-2 task-7] security: Authentication result was ATTEMPTED for /console/query.do
+2018-10-09 17:15:12,804 INFO  [RMI TCP Connection(2)-127.0.0.1] servlet: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2018-10-09 17:15:12,813 DEBUG [RMI TCP Connection(2)-127.0.0.1] undertow: stopping undertow server io.undertow.Undertow@1c48e9
